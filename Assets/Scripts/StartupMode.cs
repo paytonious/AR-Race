@@ -5,7 +5,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class StartupMode : MonoBehaviour
 {
-    [SerializeField] string nextMode = "Scan";
+    [SerializeField] string nextMode = "Main";
 
      void OnEnable()
     {
