@@ -31,15 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "ResizeObject",
-                    "type": "PassThrough",
-                    "id": "28836877-9a92-4485-82bb-035558758fe6",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -47,7 +38,7 @@
                     "name": "",
                     "id": "195fc106-963e-4cfa-ad22-eadcf15f12ca",
                     "path": "<Touchscreen>/primaryTouch/position",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "PlaceObject",
@@ -73,17 +64,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "MoveObject",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "da496b27-d7ce-4a98-9eac-86f631efd040",
-                    "path": "<Touchscreen>/touch1/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ResizeObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

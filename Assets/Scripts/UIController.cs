@@ -21,7 +21,7 @@ public class UIController : Singleton<UIController>
 
     public static void ShowUI(string name)
     {
-        ScreenLog.Log(name);
+        ScreenLog.Log(name + " UI loaded");
         Instance?._ShowUI(name);
     }
 

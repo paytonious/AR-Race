@@ -8,17 +8,12 @@ using UnityEngine.XR.ARSubsystems;
 public class PlaceObjectMode : MonoBehaviour
 {
     [SerializeField] ARRaycastManager raycaster;
-    GameObject placedPrefab;
+    [SerializeField] GameObject placedPrefab;
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     void OnEnable()
     {
         UIController.ShowUI("PlaceObject");
-    }
-
-    public void SetPlacedPrefab(GameObject prefab)
-    {
-        placedPrefab = prefab;
     }
 
     public void OnPlaceObject(InputValue value)

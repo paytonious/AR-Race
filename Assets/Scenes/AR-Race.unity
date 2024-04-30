@@ -1943,6 +1943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycaster: {fileID: 98447237}
+  placedPrefab: {fileID: 1580215799603811393, guid: aeead839d2ec467c2bdf3f6db7399d17,
+    type: 3}
 --- !u!4 &350058281
 Transform:
   m_ObjectHideFlags: 0
@@ -2299,16 +2301,19 @@ MonoBehaviour:
     - Main
     - NonAR
     - PlaceObject
+    - Scan
     _keys:
     - Startup
     - Main
     - NonAR
     - PlaceObject
+    - Scan
     _values:
     - {fileID: 1573393933}
     - {fileID: 1104762393}
     - {fileID: 1867790158}
     - {fileID: 863439019}
+    - {fileID: 1065936615}
 --- !u!1001 &708203999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2718,7 +2723,7 @@ GameObject:
   - component: {fileID: 989856647}
   - component: {fileID: 989856646}
   m_Layer: 5
-  m_Name: PlaceCheckpointButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2788,17 +2793,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 350058280}
-        m_TargetAssemblyTypeName: PlaceObjectMode, Assembly-CSharp
-        m_MethodName: SetPlacedPrefab
-        m_Mode: 2
+      - m_Target: {fileID: 701127592}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: ShowUI
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 8403188505782484981, guid: 38bbb4ee50a95b1859a0b27fc3441fad,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &989856647
@@ -2856,7 +2860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1065936614
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3176,6 +3180,18 @@ MonoBehaviour:
       - m_Target: {fileID: 701127592}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowUI
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PlaceObject
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2120704704}
+        m_TargetAssemblyTypeName: InteractionController, Assembly-CSharp
+        m_MethodName: EnableMode
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3927,7 +3943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4566,16 +4582,19 @@ MonoBehaviour:
     - Main
     - NonAR
     - PlaceObject
+    - Scan
     _keys:
     - Startup
     - Main
     - NonAR
     - PlaceObject
+    - Scan
     _values:
     - {fileID: 2101328684}
     - {fileID: 948454424}
     - {fileID: 750566321}
     - {fileID: 350058279}
+    - {fileID: 1315910330}
 --- !u!4 &2120704705
 Transform:
   m_ObjectHideFlags: 0
@@ -4626,7 +4645,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: ARTouchActions
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2034592785}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
