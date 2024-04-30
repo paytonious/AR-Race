@@ -47,7 +47,7 @@
                     "name": "",
                     "id": "195fc106-963e-4cfa-ad22-eadcf15f12ca",
                     "path": "<Touchscreen>/primaryTouch/position",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
                     "action": "PlaceObject",

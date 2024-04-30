@@ -13,7 +13,7 @@ public class UIController : Singleton<UIController>
 
     CanvasGroup currentPanel;
 
-    void Awake()
+    protected override void Awake()
     {
         base.Awake();
         ResetAllUI();
@@ -21,7 +21,7 @@ public class UIController : Singleton<UIController>
 
     public static void ShowUI(string name)
     {
-        //Debug.Log(name + (Instance != null));
+        ScreenLog.Log(name);
         Instance?._ShowUI(name);
     }
 
@@ -34,7 +34,7 @@ public class UIController : Singleton<UIController>
         }
         else
         {
-            Debug.LogError("Undefined ui panel " + name);
+            ScreenLog.Log("Undefined ui panel " + name);
         }
     }
 
