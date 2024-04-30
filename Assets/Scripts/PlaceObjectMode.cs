@@ -40,6 +40,7 @@ public class PlaceObjectMode : MonoBehaviour
         if (raycaster.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             Pose hitPose = hits[0].pose;
+            
             GameObject checkpoint = Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
             checkpoint.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
             raceTrack.addCheckpoint(checkpoint);
