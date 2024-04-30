@@ -30,6 +30,7 @@ public class InteractionController : Singleton<InteractionController>
 
     void _EnableMode(string name)
     {
+        ScreenLog.Log("Enabling " + name + " mode");
         GameObject modeObject;
         if (interactionModes.TryGetValue(name, out modeObject))
         {
