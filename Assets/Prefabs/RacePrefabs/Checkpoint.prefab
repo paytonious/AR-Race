@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 4095648694512190}
   - component: {fileID: 33358429311747312}
   - component: {fileID: 23292612060037384}
+  - component: {fileID: -3427828639750218095}
+  - component: {fileID: 843897146630218934}
   m_Layer: 0
-  m_Name: flagGreen
-  m_TagString: Untagged
+  m_Name: Checkpoint
+  m_TagString: race
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +65,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: c0ec5a7ffba8420498c4f5591c82eb8a, type: 2}
   - {fileID: 2100000, guid: c943bdeed77d67641bc49361207145e0, type: 2}
-  - {fileID: 2100000, guid: 58873f894334e3943bd742469281d5c3, type: 2}
+  - {fileID: 2100000, guid: 02af4057fdba77e3d97d22b771dd9168, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,3 +87,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-3427828639750218095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814734057580498}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 15, z: 10}
+  m_Center: {x: 0.84999996, y: 6.1, z: 0}
+--- !u!114 &843897146630218934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814734057580498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e85a20a66d8c1bba54adc2818abc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raceTrack: {fileID: 0}
+  unvisitedMaterial: {fileID: 2100000, guid: 02af4057fdba77e3d97d22b771dd9168, type: 2}
+  visitedMaterial: {fileID: 2100000, guid: f546400e941ce0cf18ed48847dc431e1, type: 2}
+  visited: 0
+  isStart: 0

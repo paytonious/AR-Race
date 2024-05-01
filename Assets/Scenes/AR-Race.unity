@@ -1944,7 +1944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycaster: {fileID: 98447237}
   startStrip: {fileID: 1442534847717448, guid: 6e3c59d4cbdd90242ad0b4a600800ab7, type: 3}
-  checkpointFlag: {fileID: 1415663951167822, guid: 8a2338584a0a9b342b09a432050609cb,
+  checkpointFlag: {fileID: 1814734057580498, guid: 9fe1b7df2ad04c74a9718985e5452ef3,
     type: 3}
   raceTrack: {fileID: 1684926313}
 --- !u!4 &350058281
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 1684926314}
   - component: {fileID: 1684926313}
   m_Layer: 0
-  m_Name: Track
+  m_Name: RaceTrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3541,6 +3541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793096a14ad480d26933caeaf6e897c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numLaps: 1
 --- !u!4 &1684926314
 Transform:
   m_ObjectHideFlags: 0
