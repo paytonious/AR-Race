@@ -56,14 +56,17 @@ public class CarController : MonoBehaviour
     }
 
     void Update() {
-        movement = new Vector3(_joystick.Horizontal, rigidBody.velocity.y, _joystick.Vertical).normalized;
+        movement = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical).normalized;
     }
 
     void fixedUpdate() {
-        rigidBody.velocity = movement * _moveSpeed * Time.fixedDeltaTime;
+        rigidBody.transform.Translate(movement * _moveSpeed * Time.fixedDeltaTime, Space.World);
 
-        // if (_joystick.Horizontal != 0 || -_joystick.Vertical != 0) {
-        //     transform.rotation = Quaternion.LookRotation(rigidBody.velocity);
-        // }
+        if (_joystick.Horizontal != 0 || -_joystick.Vertical != 0) {
+             _car.transform.rotation = Quaternion.Slerp(
+                _car.transform.rotation,
+                Quaternion.LookRotation(movement),
+                Time.fixedDeltaTime * 5.0f);
+        }
     }
 }
