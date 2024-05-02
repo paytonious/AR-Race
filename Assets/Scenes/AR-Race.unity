@@ -2336,7 +2336,7 @@ MonoBehaviour:
   raycaster: {fileID: 98447237}
   _car: {fileID: 6304703236309620820}
   _joystick: {fileID: 1881829390}
-  _moveSpeed: 10
+  _moveSpeed: 0.5
 --- !u!1 &691542577
 GameObject:
   m_ObjectHideFlags: 0

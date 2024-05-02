@@ -59,7 +59,7 @@ public class CarController : MonoBehaviour
         movement = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical).normalized;
     }
 
-    void fixedUpdate() {
+    void FixedUpdate() {
         rigidBody.transform.Translate(movement * _moveSpeed * Time.fixedDeltaTime, Space.World);
 
         if (_joystick.Horizontal != 0 || -_joystick.Vertical != 0) {
