@@ -23,7 +23,11 @@ public class CarController : MonoBehaviour
     
     public void Start() {
         UIController.ShowUI("ControlCar");
+        
         ScreenLog.Log("Started Car Controller");
+
+        _car.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        rigidBody = _car.GetComponent<Rigidbody>();
         isPlaced = false;
     }
 
@@ -38,14 +42,14 @@ public class CarController : MonoBehaviour
 
     void PlaceObject(Vector2 touchPosition)
     {
-        ScreenLog.Log("Placing Object at " + touchPosition);
+        ScreenLog.Log("Placing car at " + touchPosition);
 
         if (raycaster.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             Pose hitPose = hits[0].pose;
-            placedPrefab = Instantiate(_car, hitPose.position, hitPose.rotation);
-            rigidBody = placedPrefab.GetComponent<Rigidbody>();
-            placedPrefab.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            _car.transform.position = hitPose.position;
+            _car.transform.rotation = hitPose.rotation;
+            // placedPrefab = Instantiate(_car, hitPose.position, hitPose.rotation);
         }
 
         isPlaced = true;
@@ -58,8 +62,8 @@ public class CarController : MonoBehaviour
     void fixedUpdate() {
         rigidBody.velocity = movement * _moveSpeed * Time.fixedDeltaTime;
 
-        if (_joystick.Horizontal != 0 || -_joystick.Vertical != 0) {
-            transform.rotation = Quaternion.LookRotation(rigidBody.velocity);
-        }
+        // if (_joystick.Horizontal != 0 || -_joystick.Vertical != 0) {
+        //     transform.rotation = Quaternion.LookRotation(rigidBody.velocity);
+        // }
     }
 }
