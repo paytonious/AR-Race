@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4211211551641294}
   - component: {fileID: 33188311378075248}
   - component: {fileID: 23092281761756516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: roadStartPositions
-  m_TagString: Untagged
+  m_TagString: checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

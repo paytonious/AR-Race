@@ -22,11 +22,10 @@ public class RaceTrack : MonoBehaviour
         checkpoint.visited = true;
         
         bool lapComplete = true;
-        if (checkpoint.isStart) {
-            foreach (Checkpoint item in checkpoints) {
-                if (item.visited == false) {
-                    lapComplete = false;
-                }
+        
+        foreach (Checkpoint item in checkpoints) {
+            if (item.visited == false) {
+                lapComplete = false;
             }
         }
 

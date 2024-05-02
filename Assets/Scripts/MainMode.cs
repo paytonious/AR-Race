@@ -9,5 +9,7 @@ public class MainMode : MonoBehaviour
         UIController.ShowUI("Main");
     }
 
-    // todo add Main mode interactions
+    public void OnPlaceObject() {
+        ScreenLog.Log("Can't place objects in main mode.");
+    }
 }
